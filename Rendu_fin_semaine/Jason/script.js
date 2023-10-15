@@ -89,6 +89,122 @@ while (Jason.hp > 0 && characters.length != 0) {
     
     if (characters.length == 0) {
         console.log("Jason a tué tous les survivants")
-            break
+        break
     }
 }
+
+
+// |--------------------------------------|
+// |---------AUTRE FAÇON DE FAIRE---------|
+// |--------------------------------------|
+
+// let persos = [];
+// let morts = [];
+
+// let stats = [
+// 		(Nerd = {
+// 				p_death: 0.5,
+// 				p_atk: 0.2,
+// 				p_deathByAtk: 0.5,
+// 		}),
+// 		(Sportif = {
+// 				p_death: 0.5,
+// 				p_atk: 0.6,
+// 				p_deathByAtk: 0.4,
+// 		}),
+// 		(Blonde = {
+// 				p_death: 0.6,
+// 				p_atk: 0.3,
+// 				p_deathByAtk: 0.6,
+// 		}),
+// 		(Agile = {
+// 				p_death: 0.3,
+// 				p_atk: 0.2,
+// 				p_deathByAtk: 0.3,
+// 		}),
+// 		(Stratège = {
+// 				p_death: 0.2,
+// 				p_atk: 0.5,
+// 				p_deathByAtk: 0.4,
+// 		}),
+// ];
+
+// class Perso {
+// 		constructor(name, hp, charac) {
+// 				this.name = name;
+// 				this.hp = hp;
+// 				this.charac = charac;
+// 		}
+
+// 		atk(target) {
+// 				if (Math.random() < this.charac.p_atk) {
+// 						console.log(`${this.name} attaque ${target.name}`)
+// 						if (Math.random() > target.charac.p_death) {
+// 								console.log(`${this.name} a tué ${target.name}`)
+// 								target.hp = 0
+// 						} else {
+// 								if (Math.random() > target.charac.p_deathByAtk) {
+// 										console.log(`${this.name} a perdu 15 pv mais tue ${target.name}`)
+// 										Jason1.hp -= 15
+// 										target.hp = 0
+// 								}
+// 						}
+// 				} else {
+// 						console.log(`${this.name} essaie d'attaquer ${target.name}, mais rate.`)
+// 						if (Math.random() < target.charac.p_atk) {
+// 								console.log(`${target.name} a esquivé l'attaque de ${this.name} et inflige 10 points de dégâts à Jason.`)
+// 								Jason1.hp -= 10
+// 						}
+// 				}
+// 		}
+// }
+
+// tueur = {
+// 	p_death: 0.5, // useless
+// 	p_atk: 0.5,
+// 	p_deathByAtk: 0.5, // useless
+// };
+// let Jason1 = new Perso("Jason", 100, tueur);
+
+// for (i = 0; i < 5; i++) {
+// 	let randomName = names[Math.floor(Math.random() * names.length)];
+// 	let random = Math.floor(Math.random() * stats.length);
+// 	let randomCharac = stats[random];
+// 	let perso = new Perso(randomName, 100, randomCharac);
+
+// 	persos.push(perso);
+// 	stats.splice(random, 1);
+// }
+
+// while (Jason1.hp > 0 && persos.length > 0) {
+// 		let random = Math.floor(Math.random() * persos.length);
+// 		let randomPerso = persos[random];
+// 		Jason1.atk(randomPerso);
+
+// 		if (randomPerso.hp == 0) {
+// 				morts.push(randomPerso.name);
+// 				persos.splice(random, 1);
+// 		}
+
+// 		if (Jason1.hp <= 0 && morts.length == 5) {
+// 				console.log("Tous le monde est mort")
+// 				break
+// 		}
+
+// 		if (Jason1.hp <= 0) {
+// 				console.log("Jason est mort")
+// 				if (morts.length == 0) {
+// 						console.log("Tous les survivants ont survécues");
+// 						break
+// 				} else {
+// 						let lastDeath = morts.pop()
+// 						console.log(`Les survivants ont gagné mais ${morts.length > 1 ? `${morts.join(", ")} et ${lastDeath} sont morts` : `${lastDeath} est mort` } `)
+// 						break
+// 				}
+// 		}
+
+// 		if (persos.length == 0) {
+// 				console.log("Jason a tué tous les survivants");
+// 				break;
+// 		}
+// }
