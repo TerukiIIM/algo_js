@@ -166,6 +166,7 @@ while (Jason.hp > 0 && characters.length != 0) {
 // };
 // let Jason1 = new Perso("Jason", 100, tueur);
 
+// let names = ["Albert", "Alex", "Alexis", "Alice", "Arthur", "Charles", "Charlot", "Chris", "Christophe", "Clemence", "Clement", "Clide", "Ellie", "Elza", "Emmy", "Eric", "Eva", "Iris", "Jade", "Jessi", "John", "Jonathan", "Julia", "Julie", "June", "Kevin", "Laura", "Leo", "Leon", "Marcus", "Mark", "Max", "Mickael", "Mike", "Olivia", "Rachel", "Rick", "Robin", "Rose", "Sophie", "Stephane", "Ted", "Tess", "Thomas", "Tom", "Tony", "Victor", "Victoria"]
 // for (i = 0; i < 5; i++) {
 // 	let randomName = names[Math.floor(Math.random() * names.length)];
 // 	let random = Math.floor(Math.random() * stats.length);
